@@ -1,114 +1,200 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ZMIEŃ: tytuł widoczny na karcie przeglądarki -->
-  <title>Kosmiczna Przystań – nocne obserwacje nieba</title>
+  <title>Kosmiczna Przystań – odkrywaj wszechświat</title>
+
   <style>
-    /* ===== KOLORY – zmień je, aby strona była „Twoja” ===== */
     :root {
-      --tlo: #0b1026;        /* tło strony */
-      --karta: #1a2140;      /* tło sekcji */
-      --akcent: #facc15;     /* kolor wyróżnień i przycisku */
-      --tekst: #e2e8f0;      /* kolor tekstu */
+      --tlo: #080d1b;
+      --karta: #131d33;
+      --akcent: #38bdf8;
+      --tekst: #e2e8f0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--tlo);
       color: var(--tekst);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(135deg, #312e81, #7c3aed);
-      color: white;
+      padding: 80px 20px 70px;
+      background: linear-gradient(135deg, #101b3b, #164e63);
+      border-bottom: 2px solid var(--akcent);
     }
 
-    header h1 { margin: 0 0 10px; font-size: 2.4rem; }
-    header p  { margin: 0; font-size: 1.2rem; opacity: 0.9; }
+    header h1 {
+      margin: 0 0 12px;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 0 0 28px;
+      font-size: 1.15rem;
+      color: #cbd5e1;
+    }
 
     main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 20px;
+      max-width: 850px;
+      margin: auto;
+      padding: 35px 20px;
     }
 
     section {
       background: var(--karta);
-      border-radius: 14px;
-      padding: 20px 28px;
-      margin-bottom: 20px;
+      border: 1px solid #25334e;
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 25px;
+      transition: transform 0.2s, border-color 0.2s;
     }
 
-    h2 { color: var(--akcent); margin-top: 0; }
+    section:hover {
+      transform: translateY(-3px);
+      border-color: var(--akcent);
+    }
 
-    ul li { margin-bottom: 6px; }
+    h2 {
+      color: var(--akcent);
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    ul li {
+      margin-bottom: 9px;
+    }
 
     .przycisk {
       display: inline-block;
       background: var(--akcent);
-      color: #0b1026;
-      padding: 12px 26px;
+      color: #08111f;
+      padding: 12px 25px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.2s;
     }
 
-    .przycisk:hover { opacity: 0.85; }
+    .przycisk:hover {
+      background: white;
+      transform: scale(1.03);
+    }
+
+    .ciekawostka {
+      border-left: 4px solid var(--akcent);
+      padding-left: 15px;
+      color: #cbd5e1;
+      font-style: italic;
+    }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
+      color: #94a3b8;
       font-size: 0.9rem;
-      opacity: 0.7;
+      border-top: 1px solid #25334e;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <!-- ZMIEŃ: nazwa Twojej strony lub wymyślonej firmy -->
-    <h1>Kosmiczna Przystań</h1>
-    <p>Wymyślona firma, która organizuje nocne obserwacje nieba</p>
+    <h1>🌌 Kosmiczna Przystań</h1>
+    <p>Odkrywaj tajemnice wszechświata i poznawaj nieznane.</p>
+    <a href="#o-firmie" class="przycisk">Rozpocznij podróż</a>
   </header>
 
   <main>
-    <section>
-      <h2>O firmie</h2>
-      <!-- ZMIEŃ: opisz swoją firmę lub zainteresowania w 2–3 zdaniach. Nie podawaj żadnych danych osobowych! -->
-      <p>Kosmiczna Przystań to miejsce dla wszystkich, którzy lubią patrzeć w gwiazdy.
-         Zabieramy teleskopy tam, gdzie niebo jest najciemniejsze, i pokazujemy planety, Księżyc oraz odległe galaktyki.</p>
-      <p>Ta strona powstała na lekcji informatyki i została opublikowana za darmo w GitHub Pages.</p>
+
+    <section id="o-firmie">
+      <h2>O naszej działalności</h2>
+
+      <p>
+        Kosmiczna Przystań to miejsce dla osób, które chcą odkrywać
+        piękno nocnego nieba. Organizujemy obserwacje astronomiczne,
+        pokazujemy najciekawsze obiekty kosmosu i pomagamy stawiać
+        pierwsze kroki w astronomii.
+      </p>
+
+      <p>
+        Naszym celem jest pokazanie, że wszechświat jest bliżej,
+        niż nam się wydaje. Wystarczy spojrzeć w górę!
+      </p>
     </section>
 
     <section>
-      <h2>Co oferujemy</h2>
-      <!-- ZMIEŃ: wpisz własne zainteresowania lub usługi firmy -->
+      <h2>Co oferujemy?</h2>
+
       <ul>
-        <li>Nocne pokazy nieba przez teleskop</li>
-        <li>Warsztaty fotografii gwiazd dla początkujących</li>
-        <li>Mapy nieba i kalendarz zjawisk astronomicznych</li>
+        <li>🔭 Obserwacje Księżyca i planet przez teleskop</li>
+        <li>📸 Warsztaty fotografowania nocnego nieba</li>
+        <li>✨ Pokazy gwiazdozbiorów i ciekawych obiektów kosmosu</li>
+        <li>🪐 Spotkania dla początkujących miłośników astronomii</li>
       </ul>
     </section>
 
     <section>
-      <h2>Zobacz więcej</h2>
-      <p>Chcesz dowiedzieć się, jak działa hosting, z którego korzysta ta strona?</p>
-      <!-- ZMIEŃ (opcjonalnie): adres, do którego prowadzi przycisk -->
-      <a class="przycisk" href="https://pages.github.com/" target="_blank" rel="noopener">Poznaj GitHub Pages</a>
+      <h2>Kosmiczna ciekawostka</h2>
+
+      <p class="ciekawostka">
+        Światło ze Słońca dociera do Ziemi w około 8 minut i 20 sekund.
+        Oznacza to, że patrząc na Słońce, widzimy je takim,
+        jakie było kilka minut wcześniej.
+      </p>
     </section>
+
+    <section>
+      <h2>Odkrywaj więcej</h2>
+
+      <p>
+        Chcesz poznać więcej ciekawostek o kosmosie?
+        Odwiedź stronę NASA i odkryj najnowsze informacje
+        o wszechświecie.
+      </p>
+
+      <a
+        class="przycisk"
+        href="https://www.nasa.gov/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Poznaj NASA 🚀
+      </a>
+    </section>
+
   </main>
 
   <footer>
-    <!-- ZMIEŃ: rok i nazwa strony (bez danych osobowych) -->
-    © 2026 Kosmiczna Przystań · Strona wykonana na lekcji informatyki
+    © 2026 Kosmiczna Przystań · Projekt edukacyjny
   </footer>
 
 </body>
